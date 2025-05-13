@@ -1,0 +1,21 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Update Custom Object
+        form.form(method="POST" action="/update-cobj")
+            .form-group
+                label(for="pet_name") Pet Name:
+                input(type="text" id="pet_name" name="pet_name" required)
+            .form-group
+                label(for="pet_age") Pet Age:
+                input(type="number" id="pet_age" name="pet_age" required)
+            .form-group
+                label(for="pet_type") Pet Type:
+                input(type="text" id="pet_type" name="pet_type" required)
+            button.button(type="submit") Submit
+        
+        a.button(href="/") Return to the homepage
